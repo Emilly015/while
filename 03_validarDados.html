@@ -9,13 +9,36 @@
     Sexo: 'f' ou 'm';
     Estado Civil: 's', 'c', 'v', 'd';
     */
-
     //ENTRADA
-    
+    let nome = "";
+    let idade = "";
+    let salario = "";
+    let sexo = "";
+    let civil = "";
 
-    //PROCESSAMENTO
-
+    //PROCESSAMENTO WHILE
+    do{
+        nome = prompt(`Informe seu nome: (com mais de três caracteres)`);
+        alert(`Por favor, atente-se aos critérios!`);
+    }while(nome.length <= 3);
+    do{
+         idade = Number(prompt(`Informe sua idade:`));
+         alert(`Informe uma idade entre 0 e 150 anos!`);
+    }while(idade>150 || idade < 0);
+    do{
+        salario = Number(prompt(`Informe aqui seu salário:`));
+        alert(`Informe um valor maior que 0`);
+    }while(salario <= 0);
+    do{
+        sexo =  prompt(`fem ou masc:`);
+        alert(`Gênero Masculino ou Feminino`);
+    }while(sexo !== "masc" && sexo !== "fem");
+    do{
+        civil = prompt(`Informe aqui seu estado civil: (s -solteiro, c -casado, v -viuvo, d -divorciado`);
+        alert(`Por favor informe seu estado civil!`);
+    }while(civil !== "s" && civil !=="c" && civil !=="v" && civil !=="d");
 
     //SAÍDA
-
+    document.write(`Nome: ${nome} <br> Idade: ${idade} <br> Salário: ${salario} <br> Gênero: ${sexo} <br> Estado Civil: ${civil}`);
+    // usar if//
 </script>
