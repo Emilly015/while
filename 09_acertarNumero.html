@@ -1,0 +1,25 @@
+<script>
+    //Problema: Acertar o número
+    /*
+    O computador escolhe um número aleatório de 1 a 30, e o usuário precisa adivinhar. O programa dá dicas ("maior" ou "menor") até acertar.
+    */
+
+    //ENTRADA
+    let tentaAdivinhar = Number(prompt(`Adivinhe o número de 1 a 30:`));
+    let computador = 21;
+
+    //PROCESSAMENTO WHILE 
+    while(tentaAdivinhar !== computador){
+        if(tentaAdivinhar < computador){
+            alert(`Para que você adivinhe o número, precisa tentar números MAIORES`);
+            tentaAdivinhar = Number(prompt(`Adivinhe o número de 1 a 30:`));
+        }else{
+            alert(`Para que você adivinhe o número, precisa tentar números MENORES`);
+            tentaAdivinhar = Number(prompt(`Adivinhe o número de 1 a 30:`));
+        }
+    }
+
+    //SAÍDA
+    document.write(`Você adivinhou o número, Parabéns!! <br> O número escolhido era o ${computador}`);
+    
+</script>
