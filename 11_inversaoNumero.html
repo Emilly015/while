@@ -8,14 +8,19 @@
     */
 
     //ENTRADA
-    let informaNumero = Number(prompt(`Informe uma sequência de números:`));
+    let informaNumero = [];
 
     //PROCESSAMENTO WHILE 
-    while(informaNumero > 0){
-        //terminar 
+    let guardaNumero = 0;
+    while(guardaNumero < 5){
+        let numero = parseInt(prompt(`Informe um número:`));
+        informaNumero.push(numero);
+        guardaNumero++;
     }
-
-
-    //SAÍDA
-
+    let inverte = 4;
+    while(inverte >= 0){
+        document.write(informaNumero[inverte]);
+        inverte--;
+    }
+    //
 </script>
